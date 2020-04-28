@@ -11,6 +11,6 @@ public class TestController {
 	@ResponseBody
 	public String MyMethod() {
 		//ResponseBody--该方法是个接口 不是view
-		return "HI SPRING BOOT";
+		return "HI SPRING BOOT11111";
 	}
 }
