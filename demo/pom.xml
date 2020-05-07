@@ -14,6 +14,16 @@
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
+	<!-- 
+		springboot的优点
+		1.以starter依赖的形式自动生成
+		2.常用依赖 按组聚集
+		ssm引入多条依赖很繁琐
+		3.解决版本问题
+		4.没有web.xml 习惯优于配置
+		5.采用注解化
+		6.监控
+	 -->
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,7 +37,36 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		
+		<!-- 
+		mybatis：
+		mysql
+		连接池  hakiri spring自带
+		mybatis
+		分页插件
+		 -->
+		 <!--mybatis要用的 mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+		</dependency>
 
+		<!--mybatis要用的mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+		
+		<!--mybatis要用的分页插件pageHelper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
